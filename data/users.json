@@ -1,0 +1,30 @@
+[
+    {
+      "firstname":"Gal",
+    "lastname":"Shani",
+    "email":"galshani76@gmail.com",
+    "password":"1234",
+    "contract source":"data/contracts.json",
+},
+{
+    "firstname":"Gal",
+    "lastname":"Shani",
+    "email":"galshani76@gmail.com",
+    "password":"1234",
+    "contract source":"data/contracts.json",
+},
+{
+    "firstname":"Gal",
+    "lastname":"Shani",
+    "email":"galshani76@gmail.com",
+    "password":"1234",
+    "contract source":"data/contracts.json",
+},
+{
+    "firstname":"Gal",
+    "lastname":"Shani",
+    "email":"galshani76@gmail.com",
+    "password":"1234",
+    "contract source":"data/contracts.json",
+},
+]
