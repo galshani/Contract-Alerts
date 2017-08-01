@@ -10,5 +10,5 @@ recipeApp.factory("Alert", function(){
         this.fileName = plainObject.fileName;
     };
 
-    return Recipe;
+    return Alert;
 });
