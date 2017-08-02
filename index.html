@@ -1,6 +1,6 @@
-     
+
 <!DOCTYPE html>
-<html lang="en" ng-app="ContractsApp">
+<html lang="en" ng-app="AlertsApp">
 
 <head>
     <title></title>
@@ -20,16 +20,16 @@
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 <!--App Stuff-->
-<script src="appstuff view/alertsDetailsCtrl.js"></script>
-<script src="appstuff view/allAlertsCtrl.js"></script>
-<script src="appstuff view/reateNewAlertCtrl.JS"></script>
-<script src="appstuff view/home.html"></script>
-<script src="appstuff view/upcomingAlertsCtrl.js"></script>
 <script src="app.js"></script>
+<!-- <script src="views/alertsDetailsCtrl.js"></script>
+<script src="views/allAlertsCtrl.js"></script> -->
+<script src="views/createNewAlertCtrl.js"></script>
+<!-- <script src="views/home.html"></script>
+<script src="views/upcomingAlertsCtrl.js"></script> -->
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-default" role="navigation" ng-controller="NavCtrl">
+<nav class="navbar navbar-default" role="navigation" >
         
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -40,12 +40,12 @@
             </button>
             <a class="navbar-brand" href="#">Upcoming Alerts</a>
         </div>
-    <!--<div class="logo-header">
+    <div class="logo-header">
         <h2 class="navbar-brand brand-name">
-           <a href="index.html"><img class="img-responsive2"       
-           src="images/DigitalPondlogo.png">DigitalPond</a>
+           <a href="#!/"><img class="img-responsive2"       
+           src="">DigitalPond</a>
        </h2>
-        </div> -->
+        </div> 
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -57,11 +57,11 @@
                 <li ng-hide="isLoggedIn()"><a href="#">Login</a></li>
                 <li ng-show="isLoggedIn()"><a href="#">Logout</a></li>
             </ul>
-        </div><!-- /.navbar-collapse -->
+        </div> 
     </nav>
     
     <ng-view></ng-view>
-    <footer class=""
+    <footer class="" />
     </body>
 
 </html>

@@ -3,18 +3,21 @@ var alertsApp = angular.module("AlertsApp", ["ngRoute", "ngAnimate", "ui.bootstr
 alertsApp.config(function ($routeProvider) {
     $routeProvider
         .when("/", {
-            templateUrl: "",
-            controller: "HomeCtrl"
-        })
-        .when("/upcoming Alerts", {
-            templateUrl: "appstuff view/upcomingAlerts.html",
-            controller: "upcomingAlertsCtrl"
-        })
-        .when("/all Alerts", {
-            templateUrl: "appstuff view/allAlerts.html",
-            controller: "allAlertsCtrl"
-        })
-        .when("/createNewAlert", {
-            templateUrl: "appstuff view/createNewAlert.html",
+            templateUrl: "views/createNewAlert.html",
             controller: "createNewAlertCtrl"
         })
+        .otherwise({redirectTo:'/'});
+        
+        // .when("/upcoming Alerts", {
+        //     templateUrl: "views/upcomingAlerts.html",
+        //     controller: "upcomingAlertsCtrl"
+        // })
+        // .when("/all Alerts", {
+        //     templateUrl: "views/allAlerts.html",
+        //     controller: "allAlertsCtrl"
+        // })
+        // .when("/createNewAlert", {
+        //     templateUrl: "views/createNewAlert.html",
+        //     controller: "createNewAlertCtrl"
+        // });
+});
