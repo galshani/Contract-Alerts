@@ -1,15 +1,39 @@
+
 <form class="createForm">
     <h1>Create New Reminder</h1>
 
   Supplier Name:<br>
-  <input type="text" name="suppliername">
-  <br>
-  Category:<select name="category">
+  <input type="text" ng-model="newAlert.supplierName" name="suppliername" /> 
+  {{supplierName}}
+  <br><br>
+Name of reminder:<br>
+<input type="text" ng-model="newAlert.description" placeholder=" limit your reminder description to 20 characters"name="description" /> 
+  {{description}}<br><br>
+  Select a Category:
+  <select name="categories" ng-model="newAlert.category">
+
+    
+  </select>
+
+  Name Of Contact:<br>
+  <input type="text" ng-model="newAlert.pointOfContact" name="pointOfContact" />
+
+
+  <!--<select name="category">
     <option value="insurance">Insurance</option>
     <option value="cellular">Cellular</option>
     <option value="internet">Internet</option>
     
   </select>
+
+  
+            "description":"contract renewal", 
+            "category":"insurance",
+            "pointOfContact":"Nir",
+            "phone":"088591123",
+            "alertDate":"08-02-2017",
+            "contractScanUrl":"https://s-media-cache-ak0.pinimg.com/736x/75/f9/27/75f9271bf1008490a5bd3dfe2b5252d8--photography-marketing-photography-business.jpg",
+            "fileName"-->
   <br><br>
   <input type="text" name="lastname">
 </form>
