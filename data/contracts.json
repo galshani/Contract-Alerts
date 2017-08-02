@@ -2,6 +2,7 @@
     {
         "contract1":{
             "suppliertName":"migdal",
+            "description":"contract renewal",
             "category":"insurance",
             "pointOfContact":"Nir",
             "phone":"088591123",
@@ -11,6 +12,7 @@
         },
         "contract2":{
             "suppliertName":"migdal",
+            "description":"contract renewal", 
             "category":"insurance",
             "pointOfContact":"Nir",
             "phone":"088591123",
@@ -20,12 +22,13 @@
         },
         "contract3":{
             "suppliertName":"migdal",
+            "description":"contract renewal",
             "category":"insurance",
             "pointOfContact":"Nir",
             "phone":"088591123",
             "alertDate":"08-02-2017",
             "contractScanUrl":"https://s-media-cache-ak0.pinimg.com/736x/75/f9/27/75f9271bf1008490a5bd3dfe2b5252d8--photography-marketing-photography-business.jpg",
-            "fileName":"insurance contract",
-        },
+            "fileName":"insurance contract"
+        }
     }
 ]
