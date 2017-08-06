@@ -26,25 +26,25 @@ AlertsApp.factory("alerts", function(Alert) {
     }
 
     var remove = function(index) {
-        recipeArr.splice(index, 1);
+        alertArr.splice(index, 1);
     }
 
-    var load = function(receipePlainObjectArr) {
-        for (var i = 0; i < receipePlainObjectArr.length; i++) {
-            recipeArr.push(new Recipe(receipePlainObjectArr[i]))
+    var load = function(alertPlainObjectArr) {
+        for (var i = 0; i < alertPlainObjectArr.length; i++) {
+            alertArr.push(new Alert(alertPlainObjectArr[i]))
         }
     }
 
     var getAll = function() {
-        return recipeArr;
+        return alertArr;
     }
 
     var get = function(index) {
-        return recipeArr[index];
+        return alertArr[index];
     }
 
     var removeAll = function() {
-        recipeArr = [];
+        alertArr = [];
     }
 
     return {
