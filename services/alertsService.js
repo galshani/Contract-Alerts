@@ -1,21 +1,13 @@
-// Shared alerts Constructor
-alertsApp.factory("Alert", function(){
-    function Alert(plainObject) {
-        this.suppliertName = plainObject.suppliertName;
-        this.category = plainObject.category;
-        this.pointOfContact = plainObject.pointOfContact;
-        this.phone = plainObject.phone;
-        this.alertDate = plainObject.alertDate;
-        this.contractScanUrl = plainObject.contractScanUrl;
-        this.fileName = plainObject.fileName;
-    };
-
-    return Alert;
-});
 // a service in which a user adds,updates or removes an alert from his list.
 //a service in which a user can load an alert 
 alertsApp.factory("alerts", function(Alert,$http) {
-    var alertArr = [];
+    var alertArr;
+    // instead of the using the local storage can leave the alertArr=[] and all the added alerts will be erased
+    if(!localStorage.alertArr) {
+        localStorage.alertArr = [];
+    } else {
+        alertArr = localStorage.alertArr;
+    }
 
     var add = function(alert) {
         alertArr.push(alert);

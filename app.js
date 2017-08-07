@@ -3,8 +3,8 @@ var alertsApp = angular.module("AlertsApp", ["ngRoute", "ngAnimate", "ui.bootstr
 alertsApp.config(function ($routeProvider) {
     $routeProvider
         .when("/", {
-            templateUrl: "views/createNewAlert.html",
-            controller: "createNewAlertCtrl"
+            templateUrl: "views/allAlerts.html",
+            controller: "allAlertsCtrl"
         })
         .otherwise({redirectTo:'/'});
         

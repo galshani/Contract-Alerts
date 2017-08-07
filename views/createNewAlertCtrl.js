@@ -1,8 +1,16 @@
-alertsApp.controller("createNewAlertCtrl", function ($scope,alerts) {
+alertsApp.controller("createNewAlertCtrl", function ($scope, alerts) {
     $scope.test = "TESTTTT";
     alerts.getCategories().then(function (response) {
         $scope.categories = response.data;
      });
+
+     $scope.addNew = function () {
+         console.log("Awdawd");
+         //todo validate form
+         alerts.add($scope.alert);
+         $scope.alert = {};
+         console.log(alerts.getAll());
+     }
      
 });
   
