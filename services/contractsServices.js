@@ -1,5 +1,5 @@
 // Shared alerts Constructor
-AlertsApp.factory("Alert", function(){
+alertsApp.factory("Alert", function(){
     function Alert(plainObject) {
         this.suppliertName = plainObject.suppliertName;
         this.category = plainObject.category;
@@ -14,7 +14,7 @@ AlertsApp.factory("Alert", function(){
 });
 // a service in which a user adds,updates or removes an alert from his list.
 //a service in which a user can load an alert 
-AlertsApp.factory("alerts", function(Alert) {
+alertsApp.factory("alerts", function(Alert,$http) {
     var alertArr = [];
 
     var add = function(alert) {
@@ -47,6 +47,9 @@ AlertsApp.factory("alerts", function(Alert) {
         alertArr = [];
     }
 
+    var getCategories = function(){
+        return $http.get("../data/categories.json");
+    }
     return {
         add: add,
         update: update,
@@ -54,6 +57,7 @@ AlertsApp.factory("alerts", function(Alert) {
         load: load,
         getAll: getAll,
         get: get,
-        removeAll: removeAll
+        removeAll: removeAll,
+        getCategories:getCategories
     }
 })

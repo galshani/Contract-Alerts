@@ -1,5 +1,5 @@
 
-<form class="createForm">
+<!--<form class="createForm">
     <h1>Create New Reminder</h1>
 
   Supplier Name:<br>
@@ -34,24 +34,24 @@ Name of reminder:<br>
             "alertDate":"08-02-2017",
             "contractScanUrl":"https://s-media-cache-ak0.pinimg.com/736x/75/f9/27/75f9271bf1008490a5bd3dfe2b5252d8--photography-marketing-photography-business.jpg",
             "fileName"-->
-  <br><br>
+  <!--<br><br>
   <input type="text" name="lastname">
 </form>
-<!-- recipe by Nir-->
+ recipe by Nir-->
 <!--This view is responsible for showing, updating and deleting a recipe-->
 <div class="createForm">
     <h1>Create New Contract Reminder</h1>
 <div class="container">
 
   <div class="page-header">
-    <h1>{{alert.supplierName + "-"+alert.description}}</h1>
+    
   </div>
 
   <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
     <form class="form-horizontal">
       <div class="form-group">
         <label class="control-label col-sm-2" for="supplierName">Name of Supplier:</label>
-        <div class="col-sm-10">
+        <div class="col-sm-5">
           <input type="text" class="form-control" id="supname" placeholder="Enter supplier's name" ng-model="alert.supplierName">
         </div>
       </div>
@@ -63,20 +63,33 @@ Name of reminder:<br>
       </div>
       <div class="form-group">
         <label class="control-label col-sm-2" for="categories">Category:</label>
-        <div class="col-sm-10">
-          <textarea class="form-control" rows="5" id="categoriess" ng-model="alert.category"></textarea>
+        <div class="col-sm-3">
+          <select  class="form-control" name="categories" ng-model="alert.category"ng-options="item for item in categories" ></select>
         </div>
       </div>
       <div class="form-group">
-        <label class="control-label col-sm-2" for="steps">Steps:</label>
-        <div class="col-sm-10">
-          <textarea class="form-control" rows="5" id="steps" ng-model="recipe.steps"></textarea>
+        <label class="control-label col-sm-2" for="pointOfContact">Point of Contact:</label>
+        <div class="col-sm-3">
+          <textarea class="form-control" rows="1" id="pointOfContact" ng-model="alert.pointOfContact"></textarea>
         </div>
       </div>
       <div class="form-group">
-        <label class="control-label col-sm-2" for="imageUrl">Image URL:</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="imageUrl" placeholder="Enter image URL" ng-model="recipe.imageUrl">
+        <label class="control-label col-sm-2" for="phone">Phone number:</label>
+        <div class="col-sm-2">
+          <textarea class="form-control" rows="1" id="phone" ng-model="alert.phone"></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="alertDate">Date of Reminder:</label>
+        <div class="col-sm-3">
+          <textarea class="form-control" rows="1" id="alertDate" ng-model="alert.alertDate"></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="imageUrl">Load document:</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" id="imageUrl"  ng-model="recipe.contractScanUrl"><br>
+          Name of file:<input type="text" class="form-control" id="nameFile"  ng-model="recipe.fileName">
         </div>
       </div>
       <div class="form-group">
@@ -98,3 +111,8 @@ Name of reminder:<br>
 
 </div>
 </div>
+
+           
+            "alertDate":"08-02-2017",
+            "contractScanUrl":"https://s-media-cache-ak0.pinimg.com/736x/75/f9/27/75f9271bf1008490a5bd3dfe2b5252d8--photography-marketing-photography-business.jpg",
+            "fileName"

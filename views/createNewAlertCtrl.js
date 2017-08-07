@@ -1,14 +1,11 @@
-alertsApp.controller("createNewAlertCtrl", function ($scope,$http) {
+alertsApp.controller("createNewAlertCtrl", function ($scope,alerts) {
     $scope.test = "TESTTTT";
-
-$http.get("categories.json").then(function(response) {
-    $scope.categories = [];
-    $scope.newAlert = {};
-    for (var i = 0; i < response.data.length; i++) {
-      $scope.categories.push(new Category(response.data[i]));
-    }
-})
-  });
+    alerts.getCategories().then(function (response) {
+        $scope.categories = response.data;
+     });
+     
+});
+  
 //recipeApp.controller("NewRecipeCtrl", function ($scope, $location, recipes, activeUser, Recipe) {
 
     // If the user is not logged in going back to home screen

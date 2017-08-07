@@ -1,7 +1,5 @@
 [
-    {
-        "category1":"insurance",
-        "category2":"cellular",
-        "category3":"internet"
-    }
+"insurance",
+"cellular",
+"internet"
 ]
