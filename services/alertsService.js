@@ -1,7 +1,7 @@
 // a service in which a user adds,updates or removes an alert from his list.
 //a service in which a user can load an alert 
 alertsApp.factory("alerts", function(Alert,$http) {
-    var alertArr;
+    var alertArr = [];
     // instead of the using the local storage can leave the alertArr=[] and all the added alerts will be erased
     if(!localStorage.alertArr) {
         localStorage.alertArr = [];

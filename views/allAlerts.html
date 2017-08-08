@@ -1,27 +1,75 @@
 <div class="container">
-    
-    <div class="page-header">
-      <h1>My Contract Alerts</h1>
-      {{User.firstname}}
-    </div>
-    
-    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-        
-    </div>
-    
 
-    
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" ng-repeat="alert in alertArr" >
-        
-        <div class="allAlertsHeaders" >
-            
-            <h3>{{alert.name}}</h3>
-            <div class="allAlertsItem">
-            <p>{{recipe.description}}</p>
-</div>
-        </div>
-        
+    <div class="page-header">
+        <h1>My Contract Alerts</h1>
+
     </div>
-    
-    
+
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+
+    </div>
+
+
+
+    <div class="col-md-12">
+        <div class="allAlertsHeaders">
+            <table class="table table-condensed">
+                <tr>
+                    <th>
+                        Supplier Name <br>
+                        <input type="text" placeholder="filter" ng-model="filterSupplier.suppliertName" />
+                    </th>
+                    <th>
+                        Category<br>
+                        <input type="text" placeholder="filter" ng-model="filterCategory.category" />
+                    </th>
+                    <th>
+                        Point Of Contact
+                    </th>
+                    <th>
+                        Phone Number
+                    </th>
+                    <th>
+                        Alert Date
+                    </th>
+                    <th>
+                        File Name
+                    </th>
+                    <th>
+                        <div class="btn-group dropdown" uib-dropdown="" style="">
+                            <button id="split-button" type="button" class="btn btn-danger">Action</button>
+                            <button type="button" class="btn btn-danger dropdown-toggle" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                            <span class="sr-only">Split button!</span>
+                        </button>
+                            <ul class="dropdown-menu" uib-dropdown-menu="" role="menu" aria-labelledby="split-button">
+                                <li role="menuitem"><a href="#" ng-click="deleteItems()">Delete</a></li>
+                                <li role="menuitem"><a href="#">Update</a></li>
+                                <li role="menuitem"><a href="#">Send to e-mail</a></li>
+                                <li class="divider"></li>
+                                <li role="menuitem"><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                    </th>
+                </tr>
+
+                <!-- uib-popover="Popover Content" popover-title="Details" popover-placement="top-left" popover-is-open="isPopoverOpen" popover-trigger="click"-->
+
+                <tr ng-repeat="alert in alertArr | filter: filterSupplier">
+                    <td uib-popover="Popover Content" popover-title="Details" popover-placement="top-left" popover-is-open="isPopoverOpen" popover-trigger="click">{{ alert.suppliertName }}</td>
+                    <td>{{ alert.category }}</td>
+                    <td>{{ alert.pointOfContact }}</td>
+                    <td>{{ alert.phone }}</td>
+                    <td>{{ alert.alertDate }}</td>
+                    <td>{{ alert.fileName }}</td>
+                    <td><input type="checkbox" ng-model="alert.isChecked" /></td>
+
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+
+
 </div>

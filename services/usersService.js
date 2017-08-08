@@ -14,7 +14,13 @@ alertsApp.factory("User", function(){
 
 // Service that manges the active user
 alertsApp.factory("activeUser", function(User){
-    var user = null;
+    var user = {
+        firstname:"Gal",
+        lastname:"Shani",
+        email:"galshani76@gmail.com",
+        password:"1234",
+        contractSource:"data/contracts.json"
+        };
 
     var isLoggedIn = function() {
         return user ? true : false;
