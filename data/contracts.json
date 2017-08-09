@@ -12,18 +12,18 @@
     {
         "suppliertName":"clal",
         "description":"contract renewal", 
-        "category":"insurance",
-        "pointOfContact":"Nir",
+        "category":"cellular",
+        "pointOfContact":"Gal",
         "phone":"088591123",
         "alertDate":"08-02-2017",
         "contractScanUrl":"https://s-media-cache-ak0.pinimg.com/736x/75/f9/27/75f9271bf1008490a5bd3dfe2b5252d8--photography-marketing-photography-business.jpg",
         "fileName":"insurance contract"
     },
     {
-        "suppliertName":"migdal",
+        "suppliertName":"blah blah",
         "description":"contract renewal",
         "category":"insurance",
-        "pointOfContact":"Nir",
+        "pointOfContact":"Moshe1234",
         "phone":"088591123",
         "alertDate":"08-02-2017",
         "contractScanUrl":"https://s-media-cache-ak0.pinimg.com/736x/75/f9/27/75f9271bf1008490a5bd3dfe2b5252d8--photography-marketing-photography-business.jpg",

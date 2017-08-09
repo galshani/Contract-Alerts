@@ -73,7 +73,9 @@ This view is responsible for showing, updating and deleting a recipe-->
       <div class="form-group">
         <label class="control-label col-sm-2" for="alertDate">Date of Reminder:</label>
         <div class="col-sm-3">
-          <textarea class="form-control" rows="1" id="alertDate" ng-model="alert.alertDate"></textarea>
+          <input class="form-control" rows="1" id="alertDate" type="date" ng-model="alert.alertDate"></input>
+          <span class="validity"></span>
+         <!-- <textarea class="form-control" rows="1" id="alertDate" ng-model="alert.alertDate"></textarea>-->
         </div>
       </div>
       <div class="form-group">
